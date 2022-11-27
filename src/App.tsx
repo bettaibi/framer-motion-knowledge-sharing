@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Layout from "./core/Layout";
 
 function App() {
-  return <div className="App">Happy hacking!</div>;
+  return (
+    <Fragment>
+      <Layout />
+    </Fragment>
+  );
 }
 
 export default App;
