@@ -22,6 +22,7 @@ export const Asidebar = styled.nav`
         color: ${({theme})=> theme.palette.primary['main']};
         border-radius: 30px;
         padding: 0.5rem 0.8rem;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
         transition: all .5s ease;
         &.active{
             color: #fff;
