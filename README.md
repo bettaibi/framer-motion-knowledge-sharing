@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Framer motion basics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Simple Animation
 
-## Available Scripts
+2. Exit Animation
 
-In the project directory, you can run:
+   - to perform an exit animation, element should be wrapped between AnimationPresence
 
-### `yarn start`
+3. variants
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   - Setting animation as an object
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. keyframes
 
-### `yarn test`
+   - Values in animate can also be set as a series of keyframes. This will animate through each value in sequence.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```javascript
+         animate={{
+           scale: [1, 2, 2, 1, 1],
+           rotate: [0, 0, 270, 270, 0],
+           borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+       }}
+   ```
 
-### `yarn build`
+5. Gestures
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Framer Motion has shortcuts for animating to a set of values when gestures start, like hover, tap, drag, focus and inView.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. Drag and drop
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - A component can be made draggable with the addition of the drag prop. Lock it to either axis by setting drag to "x" or "y".
 
-### `yarn eject`
+7. Manual controls
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   - Framer motion provides useAnimation hook can be used to manually start/stop animations, and compose them together.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. MotionValues
+   - Motion uses MotionValues to track the state and velocity of every animating value.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- clientWidth is the inner width (ie. the space inside an element including padding but excluding borders and scrollbars)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- offsetWidth is the outer width (ie. the space occupied by the element, including padding and borders)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- scrollWidth is the total width including stuff that is only visible if you scroll
