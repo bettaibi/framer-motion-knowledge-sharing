@@ -37,7 +37,7 @@ export default function Gallery() {
             .map((_, index) => (
               <React.Fragment key={id + index}>
                 {index === activeIndex ? (
-                  <Styled.dot
+                  <Styled.Dot
                     as={motion.div}
                     transition={{ duration: 0.5 }}
                     layoutId="active_dot"
@@ -45,7 +45,7 @@ export default function Gallery() {
                     onClick={() => setActiveIndex(index)}
                   />
                 ) : (
-                  <Styled.dot
+                  <Styled.Dot
                     active={false}
                     onClick={() => setActiveIndex(index)}
                   />

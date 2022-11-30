@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 
 
-export const dot = styled.div<{active: boolean}>`
+export const Dot = styled.div<{active: boolean}>`
     width: 12px;
     height: 12px;
     border-radius: 50%;
