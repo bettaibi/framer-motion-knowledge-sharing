@@ -62,8 +62,7 @@ export default function Gallery() {
           .map((_, index: number) => (
             <Box
               key={id + index}
-              width="120px"
-              height="120px"
+              style={{ minHeight: "120px" }}
               overflow="hidden"
               radius="16px"
               elevation={1}

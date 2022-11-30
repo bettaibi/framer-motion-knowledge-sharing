@@ -17,6 +17,5 @@ export const Dot = styled.div<{active: boolean}>`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    row-gap: 1rem;
-    column-gap: 1rem;
+    gap: 1rem;
 `;
