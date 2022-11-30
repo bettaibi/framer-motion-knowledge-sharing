@@ -1,15 +1,26 @@
 import React from "react";
 import { Box } from "components/styled/Box.styled";
 
-export default function RandomImage({ width, height, ...extraStyles }: any) {
+export default function RandomImage({
+  width,
+  height,
+  index,
+  style,
+  ...extraProps
+}: any) {
   return (
     <Box
       overflow="hidden"
       radius="16px"
       elevation={1}
-      style={{ minWidth: width, ...extraStyles }}
+      style={{ minWidth: width, height, ...style }}
+      {...extraProps}
     >
-      <img src={`https://picsum.photos/${width}/${height}`} />
+      <img
+        src={`https://picsum.photos/${width}/${height}?random=${index}`}
+        style={{ objectFit: "cover" }}
+        alt={`random-${index}`}
+      />
     </Box>
   );
 }

@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 export default function Carousel() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [leftBoundary, setLeftBoundary] = useState<number>(0);
-  const [x, setX] = useState<number>(0);
 
   const id = useId();
 
@@ -18,13 +17,6 @@ export default function Carousel() {
       setLeftBoundary(computedLeftBoundary);
     }
   }, []);
-
-  const animateToNextImage = () => {
-    const val = x - 500;
-    if (Math.abs(val) < leftBoundary) {
-      setX(val);
-    }
-  };
 
   return (
     // Carousel Wrapper
@@ -42,25 +34,23 @@ export default function Carousel() {
           as={motion.div}
           drag="x"
           dragConstraints={{ left: -leftBoundary, right: 0 }}
-          animate={{ x }}
-          style={{ x }}
         >
           {/* Images */}
 
-          {Array(7)
+          {Array(20)
             .fill(1)
             .map((_, index) => (
               <RandomImage
-                width={500}
-                height={350}
+                width={180}
+                height={250}
+                index={index}
                 key={id + index}
-                pointerEvents="none"
+                style={{ pointerEvents: "none" }}
+                as={motion.div}
               />
             ))}
         </Stack>
       </Stack>
-
-      <button onClick={animateToNextImage}>Next Image</button>
     </>
   );
 }

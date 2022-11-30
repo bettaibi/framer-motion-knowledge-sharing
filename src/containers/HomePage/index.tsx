@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <Box p={4} height="100%">
       <Typography variant="heading3" weight={600} as="h1">
-        1. Carousel
+        1. Stories
       </Typography>
 
       <Carousel />

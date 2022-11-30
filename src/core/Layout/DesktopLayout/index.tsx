@@ -9,7 +9,13 @@ export default function DesktopLayout() {
     <Box className="gradient_bg" p={4}>
       <Stack gap={4} height="calc(100vh - 64px)">
         {/* Sidebar */}
-        <Box height="100%" className="glass_blur_bg" as={"aside"} radius="16px">
+        <Box
+          height="100%"
+          className="glass_blur_bg"
+          as={"aside"}
+          radius="16px"
+          py={2}
+        >
           <AsideContent />
         </Box>
 
@@ -19,6 +25,7 @@ export default function DesktopLayout() {
           bg={{ color: "white" }}
           radius="16px"
           as="main"
+          height="100%"
           overflow="hidden"
         >
           <Router />
