@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "components/styled/Box.styled";
+import { motion } from "framer-motion";
 
 export default function RandomImage({
   width,
@@ -13,6 +14,7 @@ export default function RandomImage({
       overflow="hidden"
       radius="16px"
       elevation={1}
+      bg={{ color: "gray", ingredient: "200" }}
       style={{ minWidth: width, height, ...style }}
       {...extraProps}
     >

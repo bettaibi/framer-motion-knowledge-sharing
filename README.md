@@ -26,7 +26,7 @@
 
    - Framer Motion has shortcuts for animating to a set of values when gestures start, like hover, tap, drag, focus and inView.
 
-6. Drag and drop
+6. Drag
 
    - A component can be made draggable with the addition of the drag prop. Lock it to either axis by setting drag to "x" or "y".
 
