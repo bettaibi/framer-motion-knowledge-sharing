@@ -10,23 +10,23 @@ export default function DesktopLayout() {
       <Stack gap={4} height="calc(100vh - 64px)">
         {/* Sidebar */}
         <Box
-          width="120px"
           height="100%"
           className="glass_blur_bg"
           as={"aside"}
           radius="16px"
+          py={2}
         >
           <AsideContent />
         </Box>
 
         {/* Content */}
         <Box
-          bg={{ color: "white" }}
           flex={1}
-          width="100%"
-          height="100%"
+          bg={{ color: "white" }}
           radius="16px"
           as="main"
+          height="100%"
+          overflow="hidden"
         >
           <Router />
         </Box>

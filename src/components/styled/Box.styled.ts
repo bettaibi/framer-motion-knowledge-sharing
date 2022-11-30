@@ -6,7 +6,7 @@
  import { BorderProps, ColorsProps, MarginProps, PaddingProps, ElevationVariants } from './styled.model';
  import { background, borders, colors, elevations, margins, paddings } from './Common.styled';
  
- type BoxCssVariants = Pick<React.CSSProperties, 'position' | 'display' | 'width' | 'height'| 'flex' | 'top' | 'bottom' | 'left' | 'right'>;
+ type BoxCssVariants = Pick<React.CSSProperties, 'position' | 'display' | 'width' | 'height'| 'flex' | 'top' | 'bottom' | 'left' | 'right' | 'overflow' | 'overflowX'>;
 
  export interface BoxProps extends PaddingProps, MarginProps, BorderProps, BoxCssVariants{
      bg?: ColorsProps;
@@ -17,7 +17,6 @@
      radius?: string;
      outline?: string;
      textAlign?: 'center' | 'right' | 'left';
-     overflow?: 'hidden' | 'auto' | 'scroll' | 'visible';
      condition?: any;
  }
  
@@ -41,6 +40,7 @@
      ${({ textAlign }) => textAlign && 'text-align:' + textAlign + ';'}
      ${({ flex }) => flex && 'flex:' + flex + ';'}
      ${({ overflow }) => overflow && 'overflow:' + overflow + ';'}
+     ${({ overflowX }) => overflowX && 'overflowX:' + overflowX + ';'}
      ${({ outline }) => outline && 'outline:' + outline + ';'}
 
   
