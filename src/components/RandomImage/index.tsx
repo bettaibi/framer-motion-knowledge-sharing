@@ -1,6 +1,5 @@
 import React from "react";
 import { Box } from "components/styled/Box.styled";
-import { motion } from "framer-motion";
 
 export default function RandomImage({
   width,
