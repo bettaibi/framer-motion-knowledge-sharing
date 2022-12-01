@@ -1,4 +1,15 @@
-# Framer motion basics
+# Animations
+
+How do animations add impact to websites?
+
+- They Can Improve Engagement and Conversion.
+- It makes us be able to tell stories and communicate emotions and ideas in a unique, easy-to-perceive way that everyone could understand.
+- They help users navigate the app by understanding the connections between various interface elements.
+- Web animation can be used to attract attention, engage people better, and communicate more clearly and effectively.
+
+But, be careful, Animations everywhere could affect on App performance.
+
+## Framer motion For React - Basics
 
 1. Simple Animation
 
@@ -35,7 +46,12 @@
    - Framer motion provides useAnimation hook can be used to manually start/stop animations, and compose them together.
 
 8. MotionValues
+
    - Motion uses MotionValues to track the state and velocity of every animating value.
+
+9. Layouts
+   - CSS layouts are difficult and expensive to animate.
+     Sometimes it doesn't even make sense. What does it actually mean to animate justify-content between flex-start and flex-end?
 
 - clientWidth is the inner width (ie. the space inside an element including padding but excluding borders and scrollbars)
 

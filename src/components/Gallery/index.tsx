@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import * as Styled from "./styled";
 
-const images = [15, 5, 18, 10, 25];
+const images = [15, 5, 18, 3, 25];
 
 export default function Gallery() {
   const id = useId();
